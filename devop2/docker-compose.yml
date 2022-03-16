@@ -1,0 +1,14 @@
+version: '2.3.3'
+services:   
+    server:
+        build: /home/user/devop2/
+        volumes:
+            - .:/home/user/devop2/App2
+        ports:
+            - "8081:3001"
+    server2:
+        build: /home/user/express_app
+        volumes:
+            - .:/home/user/express_app/App
+        ports:
+            - "8080:3000"
